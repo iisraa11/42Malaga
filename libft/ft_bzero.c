@@ -6,7 +6,7 @@
 /*   By: isrguerr <isrguerr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:56:22 by isrguerr          #+#    #+#             */
-/*   Updated: 2024/09/12 19:09:19 by isrguerr         ###   ########.fr       */
+/*   Updated: 2024/09/13 15:27:40 by isrguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void ft_bzero(void *s, size_t n)
 {
     unsigned char *p;
-    p = (char *)s;
+    p = (unsigned char *)s;
     size_t i;
     i = 0;
     while (i < n)
