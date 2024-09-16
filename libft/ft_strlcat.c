@@ -6,7 +6,7 @@
 /*   By: isrguerr <isrguerr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:53:41 by isrguerr          #+#    #+#             */
-/*   Updated: 2024/09/14 10:16:47 by isrguerr         ###   ########.fr       */
+/*   Updated: 2024/09/16 11:02:58 by isrguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t i;
-    size_t j;
+	size_t	srclen;
+    size_t dstlen;
+	size_t	i;
 
-    i = 0;
-    while (dst[i] != '\0')
-        i++;
-    while (j < size - 1 && src[i] != '\0')
-    {
-        dst[i] = src[j];
-        j++;
-    }
-    
-
+    srclen = ft_strlen(src);
+    dstlen = ft_strlen(dst);
+	i = 0;
+	if (srclen < size)
+	{
+		while (src[i] != '\0')
+			dst[dstlen++] = src[i++];
+	}
+	else
+	{
+		while (i < size - 1)
+            dst[dstlen++] = src[i++];
+		dst[dstlen++] = '\0';
+	}
+	return (srclen + dstlen);
 }
