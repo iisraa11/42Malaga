@@ -6,7 +6,15 @@
 /*   By: isrguerr <isrguerr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:59:03 by isrguerr          #+#    #+#             */
-/*   Updated: 2024/09/12 19:59:27 by isrguerr         ###   ########.fr       */
+/*   Updated: 2024/09/16 16:46:28 by isrguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int ft_toupper(int c)
+{
+    if (c >= 97 && c <= 122)
+        return (c - 32);
+    return (c);
+}

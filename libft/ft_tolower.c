@@ -6,8 +6,15 @@
 /*   By: isrguerr <isrguerr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 19:59:31 by isrguerr          #+#    #+#             */
-/*   Updated: 2024/09/13 15:44:50 by isrguerr         ###   ########.fr       */
+/*   Updated: 2024/09/17 12:04:42 by isrguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ft
+#include "libft.h"
+
+int ft_tolower(int c)
+{
+    if (c >= 65 && c <= 90)
+        return (c + 32);
+    return (c);
+}
