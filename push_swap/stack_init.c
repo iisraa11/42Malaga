@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isrguerr <isrguerr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 16:01:48 by isrguerr          #+#    #+#             */
-/*   Updated: 2024/12/17 16:15:36 by isrguerr         ###   ########.fr       */
+/*   Created: 2024/12/17 16:01:32 by isrguerr          #+#    #+#             */
+/*   Updated: 2024/12/17 16:20:47 by isrguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
 
-# include <stdlib.h>
-# include <unistd.h>
+#include "push_swap.h"
 
-typedef struct stack_node
+void *stack_init(stack_node **a, char **argv)
 {
-	int					value;
-	struct stack_node	*next;
-	struct stack_node	*prev;
-}						stack_node;
+    int i;
 
-int     main(int argc, char **argv);
-char    **ft_split(char const *str, char c);
-
-#endif
+    i = 0;
+    while(argv[i])
+    {
+        check_value(argv[i]);
+    }
+}
